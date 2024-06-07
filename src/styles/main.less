@@ -1,0 +1,27 @@
+@import "variaveis.less";
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+body{
+    background-color: @corDeFundo;
+    color: @corDosTextos;
+}
+
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+   
+    //precisamos ter cuidado com o efeito cascata do CSS. 
+    //O breakpoint de maior largura sempre deve vir antes.
+    //Se não, o menor com fundo vermelho será sobreposto, não fazendo a troca.
+    @media @breakpointTablet {
+        max-width: 80%;
+    }
+
+    @media @breakpointMobile{
+        max-width: 70%;
+    }
+    
+}
+
