@@ -2,6 +2,12 @@
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
 
+// criando mixing
+.marginBottom8{
+    margin-bottom: 8px;
+}
+
+
 //Criando reset
 *{
     margin:0;
@@ -32,4 +38,34 @@ body{
     }
     
 }
+
+header {
+    padding: 24px;
+
+    .profile-avatar{
+        display: block;
+        margin: 0 auto 24px;
+        border-radius: 50%;
+    }
+
+    .profile-bio{
+        text-align: center;
+        //& Substitui a palavra do classe pai profile-bio
+
+        &-name{
+            font-size: 16px; 
+            .marginBottom8();
+        }
+        &-subtitle{
+            font-size: 14px;
+            .marginBottom8();
+            
+        &-description{
+            font-size: 14px;
+            opacity: .7;
+        }
+
+    }
+}
+
 
