@@ -23,10 +23,18 @@ body{
     color: #colors[textColor];
 }
 
+li{
+    list-style: none;
+}
+
 .container{
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
+    height: 100vh; //colocando a altura do tamanho do viewport para evitar rolagem da página.
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
    
     //precisamos ter cuidado com o efeito cascata do CSS. 
     //O breakpoint de maior largura sempre deve vir antes.
@@ -42,7 +50,7 @@ body{
 }
 
 header {
-    padding: 24px;
+    padding-bottom: 24px;
 
     .profile-avatar{
         display: block;
@@ -87,6 +95,33 @@ header {
             &:hover{ //evento de passar o mouse
                 transform: scale(1.3); //scala do aumento
             }
+        }
+    }
+}
+
+.projects-list{
+    margin-top: 32px;
+    &-item{
+        a{
+            text-decoration: none;
+            background-color: #colors[buttonColor];
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            text-align: center;
+            color: #colors[textColor];
+            font-weight: bold;
+            border-radius: 30px;
+            border: 2px solid;
+            border-color: #colors[buttonColor];
+            transition: all ease .5s;
+
+            &:hover{
+                color: #colors[buttonColor];
+                background-color: #colors[backgroundColor];
+                
+            }
+
         }
     }
 }
